@@ -1,5 +1,5 @@
 public class ChatGptController {
-    private static String Endpoint= 'https://api.openai.com/v1/chat/completions';
+   /* private static String Endpoint= 'https://api.openai.com/v1/chat/completions';
     public static void getChatGptResult(String searchTerm){
         String searchQueryEscape = (searchTerm).trim();
         HttpRequest request=new HttpRequest();
@@ -22,6 +22,6 @@ public class ChatGptController {
         
         
 
-    }
+    }*/
 
 }
