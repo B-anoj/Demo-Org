@@ -1,0 +1,5 @@
+<apex:page >
+    <Center><p><b>Hii wlcome to visualforce class!</b></p></Center>
+    It is a good UI <br></br>
+It is easy to understand<br></br>
+</apex:page>

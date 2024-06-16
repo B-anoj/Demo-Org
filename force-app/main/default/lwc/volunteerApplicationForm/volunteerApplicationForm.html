@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Apply for Opportunity">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Volunteer's Name" value={volunteerName} onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Volunteer's Email" type="email" value={volunteerEmail} onchange={handleEmailChange}></lightning-input>
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Apply" onclick={handleApply}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

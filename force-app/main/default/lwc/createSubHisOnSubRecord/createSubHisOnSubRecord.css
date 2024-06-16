@@ -1,0 +1,7 @@
+/* Other styles if any */
+
+.slds-text-align_center h1 {
+    font-size: 1.2rem; /* Approximately equivalent to 24px */
+    font-weight: bold;
+    margin-bottom: 20px; /* Adjust as needed */
+}

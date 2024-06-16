@@ -1,0 +1,16 @@
+<template>
+    <lightning-card variant="Narrow" icon-name="standard:contact">
+        <p class="slds-text-heading_small">{activeSectionMessage}</p>
+        <lightning-button onclick={handleSetActiveSectionC} label="Open Section C"></lightning-button>
+        <lightning-accordion class="example-accordion" onsectiontoggle={handleToggleSection} active-section-name="B">
+            <template for:each={contacts} for:item="contact" key={contact.Id}>
+                <lightning-accordion-section key={contact.Id} name={contact.Id}>
+                    
+                    <p>{contact.FirstName}
+                     {contact.Email}
+                    </p>
+                </lightning-accordion-section>
+            </template>
+        </lightning-accordion>
+    </lightning-card>
+</template>

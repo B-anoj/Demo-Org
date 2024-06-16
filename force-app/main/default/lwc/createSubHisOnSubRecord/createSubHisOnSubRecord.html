@@ -1,0 +1,29 @@
+<template>
+    <div class="slds-text-align_center slds-m-around_medium" style="padding-top:15px">
+            <h1>New Subscription Renewal History</h1>
+        </div>
+    <div class="slds-box slds-m-around_medium">
+        
+        
+        <lightning-record-edit-form object-api-name="Subscription_Renewal_History__c" onsuccess={handleSuccess} onsubmit={handleSubmit}>
+            <lightning-messages></lightning-messages>
+            <lightning-layout>
+                 <lightning-layout-item size="6">
+            <lightning-input-field field-name='Renewal_Date__c'></lightning-input-field>
+            <lightning-input-field field-name='Name'></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6">
+            <lightning-input-field field-name='Subscription_ID__c' value={defaultParentId}></lightning-input-field>
+             </lightning-layout-item>
+            </lightning-layout>
+           
+        </lightning-record-edit-form>
+    </div>
+     <!-- Save and Cancel buttons -->
+            <div class="slds-text-align_center slds-m-around_medium" style="padding-bottom:15px">
+                <lightning-button class="slds-m-right_small" type="submit"  variant="brand" label="Save"></lightning-button>
+                <lightning-button label="Cancel" onclick={closeAction}></lightning-button>
+            </div>
+
+    
+</template>

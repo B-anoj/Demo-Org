@@ -1,0 +1,41 @@
+<template>
+    <lightning-record-edit-form object-api-name="Opportunity">
+        <lightning-messages></lightning-messages>
+
+      
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Amount"></lightning-input-field>
+                <lightning-input-field field-name="NextStep"></lightning-input-field>
+                <lightning-input-field field-name="Type"></lightning-input-field>
+                <lightning-input-field field-name="LeadSource"></lightning-input-field>
+                <lightning-input-field field-name="Probability"></lightning-input-field>
+            </div>
+
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="StageName"></lightning-input-field>
+                <lightning-input-field field-name="AccountId"></lightning-input-field>
+                <lightning-input-field field-name="CurrencyIsoCode"></lightning-input-field>
+                <lightning-input-field field-name="CloseDate"></lightning-input-field>
+                <lightning-input-field field-name="ExpectedRevenue"></lightning-input-field>
+                <lightning-input-field field-name="Amount"></lightning-input-field>
+            </div>
+        </div>
+ <div class="slds-m-top_medium slds-text-align_center">
+        <lightning-button
+            class="slds-m-top_small"
+            type="submit"
+            label="Save"
+            variant="Brand"
+        > </lightning-button>
+
+        <lightning-button
+                type="button"
+                variant="neutral"
+                label="Cancel"
+                onclick={handleCancel}
+            ></lightning-button>
+ </div>
+    </lightning-record-edit-form>
+</template>

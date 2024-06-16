@@ -1,0 +1,10 @@
+<template>
+    <lightning-card variant="Narrow" title="IfTrue" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <lightning-button variant="brand" label="Start" onclick={handleClick} class="slds-button_brand slds-button_stretch"></lightning-button>
+            <template if:true={showText}>
+                <h>you are able to see the hidden data</h>
+            </template>
+        </div>
+    </lightning-card>
+</template>

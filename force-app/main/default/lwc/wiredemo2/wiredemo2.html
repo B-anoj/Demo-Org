@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  title="Opportunity all data">
+      <template if:true={Opportunity.data}>
+          <template for:each={Opportunity.data} for:item="opp">
+              <p key={opp.id}>
+                  Name:{opp.Name}
+              </p>
+          </template>
+      </template>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Simply array">
+        using for each loop 
+        <template for:each={evennum} for:item=ev>
+            <p key={ev}>{ev}</p>
+        </template>
+        ============*********=================
+        Using for iterator loooping
+        <template iterator:item={evennum}>
+            <p key={item.value}>{item.value}</p>
+        </template>
+    </lightning-card>
+    =================================*******************==================================
+    Complex json data to read
+    <lightning-card title="complex json data">
+        student name: {student.Name} <p></p>
+        student age: {student.Age} <p></p>
+        student city: {student.city} <p></p>
+        student Salary: {student.Salary} <p></p>
+
+    </lightning-card>
+    <lightning-card title="complex multiple json data">
+        students name: {students.Name} <p></p>
+        students age: {students.Age} <p></p>
+        students city: {students.city} <p></p>
+        students Salary: {students.Salary} <p></p>
+
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,17 @@
+<template>
+<lightning-card variant="Narrow" title="Wire Demo with property" icon-name="standard:account">
+	<lightning-input type="date" variant="standard" name="name" label="StartDate" placeholder="type date here...">
+	</lightning-input>
+	<lightning-input type="date" variant="standard" name="name" label="EndDate" placeholder="type date here...">
+	</lightning-input>
+	<lightning-button variant="brand" label="search" onclick={handleClick}></lightning-button>
+
+	<template if:true={accounts.data}>
+		<template for:each={accounts.data} for:item="obj">
+			<p key={obj.id}>
+				Name:{obj.Name} 
+			</p>
+		</template>
+	</template>
+</lightning-card>
+</template>

@@ -1,0 +1,77 @@
+<template>
+
+    <lightning-card  variant="Narrow" title="Account record">
+        <div style="text-align: Left;">
+  <lightning-button variant="brand" label="Next" onclick={handleClick}></lightning-button>
+    </div>
+        <lightning-layout>
+            
+                <lightning-layout-item padding="around-small">
+                      
+                <div class="slds-scrollable" style="height:40rem;width:30rem">
+    <lightning-datatable
+        key-field="id"
+        data={accountList}
+        row-number-offset={rowOffset}
+        columns={columns}
+        onscroll={handleScroll}
+        onrowselection={getSelectedRecords}>
+    </lightning-datatable>
+</div>
+     <div style="display: flex; justify-content: space-between;">
+  <lightning-button variant="brand" label="Previous" onclick={handlePrevious}></lightning-button>
+  <lightning-button variant="brand" label="Next" disabled={isNextDisabled} onclick={handleNext}></lightning-button>
+    </div>
+        
+                </lightning-layout-item>
+
+
+                <lightning-layout-item padding="around-small">
+                      <!--<c-recordform recid={rid}></c-recordform> -->
+                      <lightning-datatable
+                            key-field="id"
+                            data={accountList2}
+                            columns={columns}
+                            onsave={handleSave}
+                            draft-values={draftValues}
+                            >
+                        </lightning-datatable>
+
+                </lightning-layout-item>
+             
+    
+        </lightning-layout>
+
+    
+ 
+ <div class="slds-scrollable" style="height:40rem;width:30rem">
+  <table style="border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="border: 1px solid black; padding: 8px;">Select</th>
+        <th style="border: 1px solid black; padding: 8px;">Name</th>
+        <th style="border: 1px solid black; padding: 8px;">Phone</th>
+        <th style="border: 1px solid black; padding: 8px;">Rating</th>
+        <th style="border: 1px solid black; padding: 8px;">OwnerId</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <template for:each={accountList} for:item="acc">
+        <tr key={acc.Id} style="border: 1px solid black;">
+          <td style="border: 1px solid black; padding: 8px;"><input type="checkbox" name="select" value={acc.Id}></td>
+          <td style="border: 1px solid black; padding: 8px;">{acc.Name}</td>
+          <td style="border: 1px solid black; padding: 8px;">{acc.Phone}</td>
+          <td style="border: 1px solid black; padding: 8px;">{acc.Rating}</td>
+          <td style="border: 1px solid black; padding: 8px;">{acc.OwnerId}</td> 
+        </tr>
+      </template>
+    </tbody>
+  </table>
+</div>
+<lightning-button variant="brand" label="Previous" onclick={handlePrevious}></lightning-button>
+<lightning-button variant="brand" label="Next" disabled={isNextDisabled} onclick={handleNext}></lightning-button>
+
+
+    </lightning-card>
+</template>

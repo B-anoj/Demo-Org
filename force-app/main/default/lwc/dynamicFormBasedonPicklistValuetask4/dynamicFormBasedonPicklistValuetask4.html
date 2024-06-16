@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Contact Record" icon-name="standard:account">
+        <lightning-input label="First Name"  onchange={handleFirstNameChange} required="true"></lightning-input>
+        <lightning-input label="Last Name"  onchange={handleLastNameChange} ></lightning-input>
+        <lightning-input label="Email"  onchange={handleEmailChange}></lightning-input>
+    <!-- <div class="slds-p-horizontal_medium">
+         <lightning-combobox name="types" label="Type" value={value} options={TypeOptions} onchange={handleTypeChange}> </lightning-combobox> 
+    </div> -->
+    <lightning-combobox
+            name="Role"
+            label="Role"
+            value={value}
+            placeholder="Select Role"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+        <div class="slds-m-top_medium">
+                <lightning-button label="Create Contact" onclick={createContact} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,33 @@
+<template>
+    <lightning-card title="List of Contact" icon-name="custom:custom9">
+        <lightning-quick-action-panel title="Quick Action Title">
+
+            <center>
+                <h1 style="font-size: 2em;">Contact</h1>
+                <hr>
+            </center>
+            <lightning-input type="search"
+                             onchange={handlechanged}
+                             label="Search"
+                             value={searchKey}>
+            </lightning-input>
+            <div class="slds-p-around_large">
+                <lightning-datatable data={result} columns={columns} key-field="id" onrowselection={getSelectedRecords}>
+                </lightning-datatable>
+            </div>
+            <div slot="footer">
+                <lightning-button variant="brand" label="Delete" title="delete" onclick={handleDeletecon}>
+                </lightning-button>
+                &nbsp; &nbsp;
+                <lightning-button variant="brand" label="Cancel" onclick={closeAction}></lightning-button>
+                <br>
+                <br>
+
+                <c-duplicateconlist onprevious={previousHandler} onnext={nextHandler}></c-duplicateconlist>
+            </div>
+        </lightning-quick-action-panel>
+    </lightning-card>
+
+
+
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Account all data" icon-name="standard:account">
+        <template for:each={accounts} for:item="account">
+            <p key={account.Id}>
+               Name:{account.Name}
+            </p>
+        </template>
+        <lightning-button variant="brand" label="Next" onclick={handleClick}></lightning-button>
+       
+    </lightning-card>
+</template>

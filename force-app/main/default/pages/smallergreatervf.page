@@ -1,0 +1,21 @@
+<apex:page controller="Smallergreaternumber" sidebar="false" showHeader="false">
+    <apex:form >
+        <apex:pageBlock title="calculator">
+            <apex:pageBlockSection title="smaller greater number" columns="1">
+                <apex:inputText label="Enter the first number" value="{!Num1}"/>
+                <apex:inputText label="Enter the second number" value="{!Num2}"/>
+                <apex:inputText label="Enter the third number" value="{!num3}"/>
+                
+                <apex:selectRadio label="select one option" value="{!choice}">
+                    <apex:selectOption itemLabel="Greater" itemValue="GT"></apex:selectOption>
+                    <apex:selectOption itemLabel="Smaller" itemValue="SM"></apex:selectOption>
+                </apex:selectRadio>
+                
+                <apex:commandButton value="click here to claculate" action="{!mastercalc}" />
+                
+                <apex:outputText label="The result is:" value="{!result}"></apex:outputText>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

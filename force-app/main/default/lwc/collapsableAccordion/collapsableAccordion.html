@@ -1,0 +1,51 @@
+<template>
+    <!-- <lightning-card  variant="Narrow"  title="Accordian Expand and Collapse" icon-name="standard:account">
+        <lightning-accordion allow-multiple-sections-open active-section-name="Section A" onsectiontoggle={handleSectionToggle} class="accordian">
+            <lightning-accordion-section name="Section A" label="Rich Dad and Poor Dad" if:false={variable1} onclick={handelclik1}>
+                <p>Rich Dad Poor Dad by Robert Kiyosaki and Sharon Lechter is a book that came out in 1997, 
+                    and focuses on the importance of financial literacy from an early age. 
+                    Throughout the book, the author explains how a person can increase their wealth by investing in assets 
+                    and by being smart with money.</p>
+            </lightning-accordion-section>
+            <lightning-accordion-section  name="Section B" label="Atomic Habits"  if:false={variable2} onclick={handelclik2}>
+                <p>An Easy & Proven Way to Build Good Habits & Break Bad Ones .
+                     No matter your goals, Atomic Habits offers a proven framework for improving—every .</p>
+            </lightning-accordion-section>
+            <lightning-accordion-section name="Section C" label="The 4 Hour Work Week"  if:false={variable3} onclick={handelclik3}>
+                <p>The 4 Hour Work Week is about how to get more done in less time and the importance of location and time,
+                     allocation in wealth. Even if you don't own a business</p>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    <div>{activeSection}</div>
+    </lightning-card> -->
+
+    <lightning-card variant="Narrow" title="Accordion Expand and Collapse" icon-name="standard:account" class="custom-heading">
+        <p class="slds-text-heading_small">{activeSectionMessage}</p>
+        <lightning-accordion class="example-accordion"
+                             onsectiontoggle={handleToggleSection}
+                             active-section-name="Section A">
+            <lightning-accordion-section name="Section A" label="Rich Dad and Poor Dad">
+                <p class="custom-paragraph">
+                    Rich Dad Poor Dad by Robert Kiyosaki and Sharon Lechter is a book that came out in 1997, 
+                    and focuses on the importance of financial literacy from an early age. 
+                    Throughout the book, the author explains how a person can increase their wealth by investing in assets 
+                    and by being smart with money.
+                </p>
+            </lightning-accordion-section>
+
+            <lightning-accordion-section name="Section B" label="Atomic Habits">
+                <p class="custom-paragraph">
+                    An Easy & Proven Way to Build Good Habits & Break Bad Ones .
+                    No matter your goals, Atomic Habits offers a proven framework for improving—every .
+                </p>
+            </lightning-accordion-section>
+
+            <lightning-accordion-section name="Section C" label="The 4 Hour Work Week">
+                <p class="custom-paragraph">
+                    The 4 Hour Work Week is about how to get more done in less time and the importance of location and time,
+                    allocation in wealth. Even if you don't own a business
+                </p>
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>

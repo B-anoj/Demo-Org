@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  variant="Narrow"  title="First component" icon-name="standard:account">
+    <div class="mainBody">
+       <lightning-input type="text" variant="standard"  label="Full Name" value={intnName} onchange={getFullName}></lightning-input> 
+       <lightning-input type="DATE" label="DOB" value={dob} onchange={getDateOfBirth}></lightning-input>
+       <lightning-input type="Textarea"  label="Address" value={address} onchange={getAddress}></lightning-input>
+       
+       <lightning-button variant="brand" label="Save" title="Save" onclick={handleSave}></lightning-button>
+    </div>  
+    </lightning-card>
+     
+</template>

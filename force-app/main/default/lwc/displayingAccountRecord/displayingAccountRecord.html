@@ -1,0 +1,19 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+       <div class="slds-box slds-p-top_small" style="background-color: white;">
+                <lightning-datatable
+                    key-field="Id"
+                    data={accountData}
+                    columns={accountColumns}
+                    
+                ></lightning-datatable>
+            </div> 
+             <div class="slds-box slds-p-top_small" style="background-color: white;">
+                <lightning-datatable
+                    key-field="Id"
+                    data={contactData}
+                    columns={contactColumns}>
+                    </lightning-datatable> 
+             </div>
+    </lightning-card>
+</template>

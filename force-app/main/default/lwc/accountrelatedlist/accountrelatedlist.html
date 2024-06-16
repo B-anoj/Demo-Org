@@ -1,0 +1,26 @@
+<template>
+    <lightning-card >
+        
+        <label class="slds-form-element__label" for="select-01">Select Account</label>
+       <lightning-button label="Relatedlist"  onclick={handleClick}></lightning-button>
+           
+                    <template for:each={accounts.data} for:item="acc">
+                        <p key={acc.Id} value={acc.Id}>
+                            {acc.Name}
+                        </p>
+                    </template>
+           
+   
+        <template if:true={contacts}>
+            <lightning-card title="Contacts"  >
+                <div style="height: 300px;">
+                    <lightning-datatable
+                                         key-field="Id"
+                                         data={contacts}
+                                         columns={columns}>
+                    </lightning-datatable>
+                </div>    
+            </lightning-card>
+        </template>
+    </lightning-card>
+</template>

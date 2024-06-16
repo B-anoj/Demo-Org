@@ -1,0 +1,14 @@
+<template>
+<lightning-card    title="Contactdata1" icon-name="standard:account">
+        <lightning-input  label="Search" onchange={handlechange}></lightning-input>
+
+        <template for:each={result} for:item="con">
+            <p key={con.Id}>
+                    Name:{con.FirstName}{con.LastName}<br>
+                    Phone:{con.Phone}<br>
+                    Email:{con.Email}
+            </p>
+
+        </template>
+    </lightning-card>
+</template>

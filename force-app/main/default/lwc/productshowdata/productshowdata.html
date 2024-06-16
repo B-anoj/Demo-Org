@@ -1,0 +1,81 @@
+<template>
+        <lightning-quick-action-panel>
+        <lightning-card  variant="Narrow"  title="Search Product" icon-name="standard:account">
+            <lightning-input variant="brand"  label="search" onchange={handelchange}></lightning-input>
+        <div style="height: 300px;">
+        <template if:false={showDataTable}>
+            <lightning-datatable
+                    key-field="id"
+                    data={dataList}
+                    columns={columns}>
+                    onrowselection={showSelectedRecords}>
+            </lightning-datatable>
+        </template>
+            <div class="slds-m-top_medium">
+                    <lightning-button label="Next" onclick={showSelectedRecords} variant="brand" class="slds-float_right"></lightning-button>
+            </div>
+        </div>   
+      </lightning-card>
+</lightning-quick-action-panel> 
+       <!-- <lightning-datatable
+                    key-field="id"
+                    data={selectedProduct}
+                    columns={columns}>
+        </lightning-datatable> -->
+<template if:true={showDataTable}>
+    <div class="slds-box slds-theme–default">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        Name
+                    </th>
+                     <th class="" scope="col">
+                        ProductCode
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={selectedProduct} for:item="pro">
+                    <tr class="slds-hint-parent" key = {pro.Id}>
+                        <td data-label= "Product Name">
+                            <div class="slds-cell-wrap">{pro.Name}</div>
+                        </td> 
+
+
+                       <td data-label="Product Code">
+                          <div class="slds-cell-wrap">{pro.ProductCode}</div>
+                       </td>  
+                    </tr>
+                </template> 
+            </tbody>
+        </table>
+        <lightning-button label="Close" onclick={closePopup}></lightning-button>
+    </div>
+</template>
+</template>
+
+
+<!-- Productshowdata.html
+<template>
+     <lightning-quick-action-panel>
+    <lightning-card title="Search Product">
+        <lightning-input variant="label-hidden" type="search" label="Search" onchange={handleSearchChange}></lightning-input>
+        <div style="height: 300px;">
+    
+            <lightning-datatable
+                key-field="Id"
+                data={dataList}
+                columns={columns}
+                onrowselection={handleRowSelection}>
+            </lightning-datatable>    
+        </div>
+        <div class="slds-m-top_medium">
+                <lightning-button label="Next" onclick={navigateToSelectedRecords} variant="brand" class="slds-float_right"></lightning-button>
+        </div>
+        <template if:true={showDataTable}>
+         <c-display-selectd-record selected-ids={selectedIds}></c-display-selectd-record>
+        </template>
+    </lightning-card>
+    </lightning-quick-action-panel>
+</template> -->

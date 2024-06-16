@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contact Records">
+        <lightning-datatable if:true={contacts.data}
+            key-field="id"
+            data={contacts.data}
+            columns={columns}>
+        </lightning-datatable>
+
+
+        <lightning-button label="Delete" variant="brand"  onclick={getSelectedRec} ></lightning-button> 
+        <lightning-button label="Cancel" variant="brand" onclick={Cancelme}></lightning-button>
+    </lightning-card>  
+</template>

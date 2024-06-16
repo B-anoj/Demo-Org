@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Accountdata onclick button">
+        <lightning-button variant="brand" label="click" title="titleName" onclick={handleClick}></lightning-button>
+        <template for:each={acclst} for:item="acc">
+            <p key={acc.Id}>
+                Name:{acc.Name}
+            </p>
+        </template>
+        
+    </lightning-card>
+
+</template>

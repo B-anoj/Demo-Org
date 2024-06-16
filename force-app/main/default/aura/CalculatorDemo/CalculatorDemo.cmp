@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="num1" type="Integer"/>
+    <aura:attribute name="num2" type="Integer"/>
+    <aura:attribute name="res" type="Decimal"/>
+    <lightning:card title="Calculator">
+        <lightning:input type="number" label="Enter your First Number" value="{!v.num1}"/>
+        <lightning:input type="number" label="Enter your Second Number" value="{!v.num2}"/>
+        <lightning:button variant="brand" label="Add" title="Brand action" onclick="{! c.DoAdd }" />
+        <lightning:button variant="brand" label="Sub" title="Brand action" onclick="{! c.DoSub }" />
+        <lightning:button variant="brand" label="Mul" title="Brand action" onclick="{! c.Domul }" />
+        <lightning:button variant="brand" label="Div" title="Brand action" onclick="{! c.DoDiv }" />
+        <!-- lightning:button variant="Brand" label="Add" onClick="{!c.DoAdd}"></lightning:button>
+        <lightning:button variant="Brand" label="sub" onClick="{!c.DoSub}"></lightning:button>
+        <lightning:button variant="Brand" label="mul" onClick="{!c.Domul}"></lightning:button> 
+        <lightning:button variant="Brand" label="div" onClick="{!c.DoDiv}"></lightning:button> <br/-->
+        Result:{!v.res}
+    </lightning:card>
+</aura:component>

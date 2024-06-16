@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Contact Record" icon-name="standard:account">
+        <lightning-input label="First Name"  onchange={handleFirstNameChange} required="true"></lightning-input>
+        <lightning-input label="Last Name"  onchange={handleLastNameChange}  required="true"></lightning-input>
+        <lightning-input label="Email"  onchange={handleEmailChange}  required="true"></lightning-input>
+        <div class="slds-m-top_medium">
+                <lightning-button label="Create Contact" onclick={createContact} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

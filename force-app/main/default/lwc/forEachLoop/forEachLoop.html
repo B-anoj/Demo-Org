@@ -1,0 +1,19 @@
+<template>
+    <lightning-card variant="Narrow" title="For Each Loop Statement" icon-name="standard:account">
+        <template for:each={listofCar} for:item="car" >
+            <p key={car.Id}>
+                CarName: {car.Name}
+            </p>
+        </template>
+    </lightning-card>
+</template>
+
+<!-- <template>
+    <lightning-card  variant="Narrow"  title="Fo Each Loop Statement" icon-name="standard:account">
+        <template for:each = {listofCar} for:Item ="car" key="car.Id">
+            <p key={car.Id}>{car.Name}</p>
+        </template>
+       
+    </lightning-card>
+
+</template> -->

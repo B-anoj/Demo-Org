@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="Account details" icon-name="standard:account">
+     <lightning-record-form 
+     record-id={recid}
+     object-api-name={objectApiName}
+     mode="edit"
+     fields={fields}
+     columns="2"
+     onsubmit={handleSubmit}>
+                     
+  <lightning-input-field field-name={name}></lightning-input-field>
+  <lightning-input-field field-name={revenue}></lightning-input-field>
+  <lightning-input-field field-name={industry}></lightning-input-field>
+
+
+
+     </lightning-record-form>
+    </lightning-card>
+
+</template>

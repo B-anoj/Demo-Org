@@ -1,0 +1,13 @@
+<template>
+
+    HEllo
+    <lightning-card title="search contact-wire" icon-name="standard:account">
+      <lightning-input variant="brand" label="Enter the saerch text" type="search"  onchange={handelchange} ></lightning-input>
+      
+          <template for:each={contactlist} for:item="con">
+              <p key={con.Id}>
+                  {con.Name}
+              </p>
+          </template>
+    </lightning-card> 
+</template>

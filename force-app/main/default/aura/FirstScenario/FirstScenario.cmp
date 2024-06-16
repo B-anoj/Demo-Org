@@ -1,0 +1,17 @@
+<aura:component Controller="ClassAura" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	 <div class="slds-col modal-header slds-modal__header">
+    <h1><b>Lead Record</b></h1>
+         <lightning:input aura:id="lname" label="Last name" name="lastname" placeholder="last name" required="true" />
+         <lightning:input aura:id="lstatus" label="Lead Status" name="Status" required="true" />
+        <lightning:input aura:id="lemail" type="email" label="Email" name="email" placeholder="Email"/>
+        <lightning:input aura:id="lphone" type="Number" label="Phone" name="Phone" placeholder="Phone"/>
+        <lightning:input aura:id="lcomp" label="Company" name="Company" placeholder="Company Name" required="true"/> 
+         <footer>
+        <div class="slds-col modal-footer slds-modal__footer">  
+            <div class="slds-align_absolute-center"> 
+                <lightning:button variant="brand" label="Save" onclick="{! c.saveClick }"/>
+            </div>
+        </div>
+        </footer>
+    </div>
+</aura:component>

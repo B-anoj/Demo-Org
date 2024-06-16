@@ -1,0 +1,12 @@
+<template>
+	<lightning-card variant="Narrow" title="Account lookup" icon-name="standard:account">
+		<div>
+			<lightning-record-picker object-api-name="Account" placeholder="Search..." label="Select a record"
+				onchange={handleChange}>
+			</lightning-record-picker>
+		</div>
+		<template if:true={isChild}>
+			<c-update-task8 acc-id={id}></c-update-task8>
+		</template>
+	</lightning-card>
+</template>

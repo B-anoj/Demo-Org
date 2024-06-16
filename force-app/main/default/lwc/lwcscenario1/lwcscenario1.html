@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Account Record Insert and Delete" icon-name="standard:account">
+        <lightning-datatable
+            key-field="Id"
+            data={accountList}
+            columns={columns}
+            onsave={handleSave}
+            draft-values={draftValues}
+            onrowaction={handleRowAction}>
+        </lightning-datatable>
+        <div>
+            <lightning-button-icon
+                icon-name="utility:add"
+                variant="border-filled"
+                alternative-text="Add Row"
+                title="Add Row"
+                onclick={handleAddRow}>
+            </lightning-button-icon>
+            <lightning-button-icon
+                icon-name="utility:delete"
+                variant="border-filled"
+                alternative-text="Delete Row"
+                title="Delete Row"
+                onclick={handleDeleteSelected}>
+            </lightning-button-icon>
+        </div>
+         
+    </lightning-card>
+</template>

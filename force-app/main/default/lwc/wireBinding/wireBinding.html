@@ -1,0 +1,15 @@
+<template>
+<lightning-card variant="Narrow" title="Wire with function" icon-name="standard:account">
+	
+	<template if:true={accounts}>
+		<template for:each={accounts} for:item="obj">
+			<p key={obj.id}>
+				Name:{obj.Name},
+				Phone: {obj.Phone},
+				Description: {obj.Description}
+			</p>
+		</template>
+        {error}
+	</template>
+</lightning-card>
+</template>

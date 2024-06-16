@@ -1,0 +1,40 @@
+<apex:page setup="false" sidebar="true" showheader="true" tabStyle="account">
+    <apex:sectionHeader title="Position Edit" subtitle="New Position Record"/>
+    <apex:form >
+         <apex:pageBlock title="Account Details" id="accBlock">
+        
+            <apex:pageblockButtons location="both">
+            
+                <!-- Button Controls.... -->
+                <apex:commandButton value="Save"/>
+                <apex:commandButton value="Save & New"/>
+                <apex:commandButton value="Cancel"/>
+                <apex:commandButton value="Delete"/>
+                <apex:commandButton value="Search"/> 
+                
+                <!-- CommandLink Controls.... -->
+                <b>
+                    <apex:commandLink value="First"/> 
+                    <apex:commandLink value="Previous"/> 
+                    <apex:commandLink value="Next"/>
+                    <apex:commandLink value="Last"/>
+                </b>
+            </apex:pageblockButtons>       
+        
+            <apex:pageblockSection title="Account Information" columns="2" collapsible="true">
+            </apex:pageblockSection>
+            
+            <apex:pageblockSection title="Contact Details" columns="2" collapsible="true">
+            </apex:pageblockSection>
+            
+            <apex:pageblockSection title="Address Information" columns="2" collapsible="true">
+            </apex:pageblockSection>
+            
+            <apex:pageblockSection title="Milestone Details" columns="2" collapsible="true">
+            </apex:pageblockSection>
+            
+            <apex:pageblockSection title="Additional Information" columns="2" collapsible="true">
+        </apex:pageblockSection>
+        </apex:pageBlock> 
+    </apex:form>
+</apex:page>

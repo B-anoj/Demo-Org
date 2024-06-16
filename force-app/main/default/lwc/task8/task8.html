@@ -1,0 +1,8 @@
+<template>
+    <lightning-card  variant=""  title="Task Update" icon-name="standard:account">
+        <lightning-input label="Subject" onchange={handelSubjectchange} class="slds-m-bottom_x-small"></lightning-input>
+        <lightning-input label="ActivityDate" onchange={handelActivityDatechange} class="slds-m-bottom_x-small"></lightning-input>
+        <lightning-combobox label="Status" value={taskStatus} options={statusOptions} onchange={handelStatuschange}></lightning-combobox> 
+        <lightning-button variant="brand" label="Update" onclick={handleUpdate}></lightning-button> 
+    </lightning-card> 
+</template>

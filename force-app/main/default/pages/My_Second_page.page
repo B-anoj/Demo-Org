@@ -1,0 +1,37 @@
+<apex:page >
+    <apex:pageBlock title="General Information">
+    <apex:pageBlockSection title="Registration info" collapsible="true">
+        </apex:pageBlockSection>
+        <center><b>Hii Banoj</b></center>
+           <apex:pageBlockSection title="Joining info">
+        </apex:pageBlockSection>
+        <center><b>How are you</b></center>
+           <apex:pageBlockSection title="Address info">
+        </apex:pageBlockSection>
+        <center><b>When you will come back to office</b></center>
+    </apex:pageBlock>
+    <apex:pageBlock title="Finance Information">
+    
+    <apex:pageBlockSection title="cash info">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Property info">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="jwellery info">
+        </apex:pageBlockSection><apex:pageBlockSection title="cash info">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="Contact Information">
+        <apex:pageBlockSection title="current add info">
+        </apex:pageBlockSection>
+            <apex:pageBlockSection title="permanent add info">
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+    <apex:pageBlock title="Relationship Information">
+    <apex:pageBlockSection title="Immediate family info">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Relative info">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>

@@ -1,0 +1,31 @@
+<apex:page setup="true" sidebar="true" tabStyle="contact" standardController="Account">
+    
+    <apex:sectionHeader title="Account Edit"  subtitle="New Account"></apex:sectionHeader>
+    
+      <apex:form >
+            <apex:pageBlock title="Account Edit" >
+                
+                 <apex:pageblockbuttons location="both" >
+                    <apex:commandButton value="Save"></apex:commandButton>
+                     <apex:commandButton value="Save & New"></apex:commandButton>
+                    <apex:commandButton value="Cancel"></apex:commandButton>
+                     
+                </apex:pageblockbuttons>
+                
+                <apex:pageBlockSection title="Account Information" collapsible="true" columns="2">
+                         
+                    <apex:inputField value="{!Account.OwnerId}"/>
+                    <apex:inputField value="{!Account.Name}"></apex:inputField>
+                    <apex:inputField value="{!Account.Rating}"/>
+                    <apex:inputField value="{!Account.Phone}"/>
+                    <apex:inputField value="{!Account.Fax}"/>
+                </apex:pageBlockSection>
+            
+                                   
+            
+            
+            
+            
+          </apex:pageBlock>
+        </apex:form>
+</apex:page>

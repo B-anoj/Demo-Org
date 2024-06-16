@@ -1,0 +1,13 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Delete acc data" >
+        
+        <template for:each={account.data} for:item="acc">
+            <p key={acc.id}>
+                {acc.Name}
+            </p>
+        </template>
+        <lightning-button variant="brand" label="Delete"  onclick={handleDelete} value={currentrecordId}></lightning-button>
+        <lightning-input type="radio"  name="radiobutton" value={acc.id} label="label" onchange={handelchange}></lightning-input>
+        
+    </lightning-card>
+</template>

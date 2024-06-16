@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Update Tasks" icon-name="standard:task">
+        <div class="slds-m-around_medium">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={tasks} for:item="task">
+                        <tr key={task.Id}>
+                            <td>{task.Subject}</td>
+                            <td>{task.Status}</td>
+                            <td>
+                                <lightning-combobox value={task.Status} options={statusOptions} 
+                                    onchange={handleStatusChange}>
+                                </lightning-combobox>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

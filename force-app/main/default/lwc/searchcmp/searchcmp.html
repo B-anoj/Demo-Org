@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+       
+       <lightning-input variant="brand" label="search" onchange={handelchange}></lightning-input>
+       <template if:true={Account.data}>
+           <template for:each={Account.data} for:item="acc">
+               <p key={acc.id}>
+                   name:acc.name;
+               </p>
+
+           </template>
+       </template>
+
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+    <div class="card-container">
+        <template for:each={contacts} for:item="contact">
+            <div key={contact.Id} class="card">
+                <p>Name: {contact.Name}</p>
+                <p>Email: {contact.Email}</p>
+            </div>
+        </template>
+    </div>
+    </lightning-card>
+
+</template>

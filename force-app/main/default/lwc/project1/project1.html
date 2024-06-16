@@ -1,0 +1,37 @@
+<template>
+
+    <lightning-card  variant="Narrow"  title="Employee Details" >
+    <lightning-input type="text" label="FirstName" ></lightning-input>
+    <lightning-input type="text" label="LastName" ></lightning-input>
+    <lightning-input type="integer" label="Age" ></lightning-input>
+    <lightning-input type="intNum" label="Phone Number" ></lightning-input>
+    <lightning-input type="Date" label="DOB" ></lightning-input>
+    <lightning-input type="text" label="Addresses" ></lightning-input>
+
+    <lightning-button variant="brand" label="Save" onclick={handleClick}></lightning-button>
+    <lightning-button variant="Neutral" label="Cancel" onclick={handleClick}></lightning-button>
+
+<!-- if statement when it is true it is given the o/p ,when it is false it is not given o/p-->
+    <template if:true={Visiblee}>
+     Banoj
+    </template>
+
+<!--Iterate the for loop-->
+    <template for:each={Employee} for:item="emp">
+        <p key={emp.Id}>
+            FirstName={emp.FirstName}
+            LastName={emp.LastName}
+            Salary={emp.Salary}
+            </p>
+    </template>
+
+<!--Binding the data from js-->
+    <lightning-card title='Employee Details'>
+       FirstName:{FirstName}
+       <lightning-input label="FirstName" onchange={handelchange}></lightning-input> 
+    </lightning-card>
+    
+       
+    </lightning-card>
+    
+</template>

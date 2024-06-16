@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Contacts as Table" icon-name="standard:contact">
+        <div class="slds-scrollable_y">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-no-row-hover">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="First Name">First Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Last Name">Last Name</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Email">Email</div>
+                        </th>
+                        <th class="" scope="col">
+                            <div class="slds-truncate" title="Phone">Phone</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={contacts} for:item="contact" key={contact.Id}>
+                        <tr key={contact.Id}>
+                            <td data-label="First Name">
+                                <div class="slds-truncate">{contact.FirstName}</div>
+                            </td>
+                            <td data-label="Last Name">
+                                <div class="slds-truncate">{contact.LastName}</div>
+                            </td>
+                            <td data-label="Email">
+                                <div class="slds-truncate">{contact.Email}</div>
+                            </td>
+                            <td data-label="Phone">
+                                <div class="slds-truncate">{contact.Phone}</div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>

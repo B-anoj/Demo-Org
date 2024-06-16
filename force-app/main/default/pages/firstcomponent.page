@@ -1,0 +1,28 @@
+<apex:page setup="false" sidebar="false" tabStyle="contact" >
+    
+   
+        <apex:sectionHeader title="Account" ></apex:sectionHeader>
+        <apex:form >
+            <apex:pageBlock title="Account Details" >
+                        <apex:pageblockbuttons location="both" >
+                            <apex:commandButton value="Save"></apex:commandButton>
+                            <apex:commandButton value="Cancel"></apex:commandButton>
+                            
+                            <b>  <apex:commandLink value="Save"></apex:commandLink></b>
+                        </apex:pageblockbuttons>
+                
+                      <apex:pageBlockSection title="Account Details" collapsible="true" columns="2">
+                            
+                     </apex:pageBlockSection>
+            
+            </apex:pageBlock>
+            
+            
+            
+            
+            
+    
+        </apex:form>
+    
+    
+</apex:page>

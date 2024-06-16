@@ -1,0 +1,12 @@
+<template>
+<lightning-quick-action-panel>
+    <lightning-card title="Selected Records">
+        <template if:true={selectedIds}>
+            <p>Selected Record IDs: {selectedIds}</p>
+        </template>
+        <template if:false={selectedIds}>
+            <p>No records selected.</p>
+        </template>
+    </lightning-card>
+</lightning-quick-action-panel>
+</template>

@@ -1,0 +1,13 @@
+<apex:page controller="sumoftwonumber" sidebar="false" showHeader="false">
+    <apex:form >
+        <apex:pageBlock title="sum of two number">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText label="enter first number" value="{!num1}"/>
+                <apex:inputText label="enter second number" value="{!num2}"/>
+                <apex:commandButton value="click here to calculate" action="{!m1}"/>
+                <apex:outputText label="The result is:" value="{!result}"></apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    
+</apex:page>

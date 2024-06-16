@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Calculator">
+        <lightning-input  label="num1" onchange={handlerchange1}></lightning-input>
+        <lightning-input  label="num2" onchange={handlerchange2}></lightning-input>
+        <lightning-button variant="Brand" label="Addition"  onclick={DoAdd}></lightning-button>
+        <lightning-button variant="Brand" label="Substraction" onclick={Dosub}></lightning-button>
+        <lightning-button variant="Brand" label="Multiplication" onclick={Domul}></lightning-button>
+        <lightning-button variant="Brand" label="Division" onclick={Dodiv}></lightning-button>      
+    Result={res}
+    </lightning-card>
+
+</template>

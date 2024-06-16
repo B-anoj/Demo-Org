@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Account Data" icon-name="standard:account">
+        <lightning-datatable
+            key-field="Id"
+            data={accounts}
+            columns={accountColumns}
+            onrowselection={handleRowSelection}>
+        </lightning-datatable>
+        <template if:true={selectedAccountId}>
+            <lightning-card  title="TaskData" icon-name="standard:contact">
+                <lightning-datatable
+                    key-field="id"
+                    data={tasks}
+                    columns={taskColumns}
+                    onsave={handleSave}>
+                </lightning-datatable>   
+            </lightning-card>
+        </template>
+    </lightning-card>
+</template>

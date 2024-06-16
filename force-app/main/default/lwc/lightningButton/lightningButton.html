@@ -1,0 +1,14 @@
+<template>
+    <lightning-card variant="Narrow" title="AllButton" icon-name="standard:account">
+        <div class="button-row" >
+            <lightning-button variant="brand" label="Out Of Stock"  onclick={handleOutOfStock}></lightning-button>
+            <lightning-button variant="brand" label="Out for delivery"  onclick={handleOutfordelivery}></lightning-button>
+            <lightning-button variant="brand" label="Stock Available"  onclick={handleStockAvailable}></lightning-button>
+        </div>
+        <div class="button-row" style="margin-top: 40px;"> 
+            <lightning-button variant="brand" label="Save"  onclick={handleSave}></lightning-button>
+            <lightning-button variant="brand" label="Cancel" onclick={handleCancel}></lightning-button>
+            <lightning-button variant="brand" label="Modifie"  onclick={handleModifie}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

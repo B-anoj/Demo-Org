@@ -1,0 +1,17 @@
+<template>
+    <lightning-card variant="Narrow" title="Account Record" icon-name="standard:account">
+        <lightning-input label="Name" onchange={handleNameChange}></lightning-input>
+        <lightning-input label="Phone" onchange={handlePhoneChange}></lightning-input>
+        <lightning-combobox
+            name="Role"
+            label="Role"
+            value={Role}
+            placeholder="Select Role"
+            options={options}
+            onchange={handleChange}>
+        </lightning-combobox>
+        <div class="slds-m-top_medium">
+            <lightning-button label="Create Account" onclick={createAccount} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

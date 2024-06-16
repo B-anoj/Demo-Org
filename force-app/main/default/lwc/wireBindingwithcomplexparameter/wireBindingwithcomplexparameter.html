@@ -1,0 +1,13 @@
+<template>
+   <lightning-card   title="Account Record Search By Name" icon-name="standard:account">
+    <lightning-input type="search"  onchange={handleChange}></lightning-input>
+    <lightning-button variant="brand" label="Find Account"  onclick={handleClick}></lightning-button>
+    <template if:true={accounts}>
+		<template for:each={accounts} for:item="obj">
+			<p key={obj.Id}>
+				Name:{obj.Name} 
+			</p>
+		</template>
+	</template>
+   </lightning-card>
+</template>

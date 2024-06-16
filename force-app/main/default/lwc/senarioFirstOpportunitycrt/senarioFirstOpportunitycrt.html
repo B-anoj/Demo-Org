@@ -1,0 +1,10 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Opportunity Record" icon-name="standard:account">
+        <lightning-input label="Name"  onchange={handleNameChange} required="true"></lightning-input>
+        <lightning-input label="StageName"  onchange={handleStageNameChange}  required="true"></lightning-input>
+        <div class="slds-m-top_medium">
+                <lightning-button label="Create Opportunity" onclick={createOpportunity} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+
+</template>

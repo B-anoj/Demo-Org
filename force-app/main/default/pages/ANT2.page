@@ -1,0 +1,11 @@
+<apex:page >
+hellow this ant2 page
+  <apex:tabPanel >
+  <apex:tab title="tab1" label="My firestTab">
+  Hii this is frist tab.
+  </apex:tab>
+   <apex:tab title="tab2" label="My second Tab">
+   hii this is second tab.
+   </apex:tab>
+  </apex:tabPanel>
+</apex:page>

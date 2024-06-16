@@ -1,0 +1,32 @@
+<!-- UpdateTask8.html -->
+<template>
+    <lightning-card variant="Narrow" title="Update Task">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr>
+                     <th scope="col">Status</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={tasks} for:item="ts" for:index="index">
+                    <tr key={ts.Id}>
+                            <td>
+                                <lightning-combobox type="Picklist" value={ts.Status} onchange={handleInputChange}  options={statusOptions} data-index={index} data-field="Status" readonly={ts.edit} ></lightning-combobox> 
+                            </td>
+                            <td>
+                                <lightning-input type="text" value={ts.Subject} onchange={handleInputChange} data-index={index} data-field="Subject" readonly={ts.edit} ></lightning-input>
+                            </td>
+                             <td>
+                                <button class="slds-button slds-button_success" data-index={index} data-field="editmode" onclick={handleEdit}>Edit</button>
+                            </td>
+                        <!-- <td>{ts.Status}</td>
+                        <td>{ts.Subject}</td> -->
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+        <button class="slds-button slds-button_brand" onclick={handleSave}>Save</button>
+    </lightning-card>
+</template>

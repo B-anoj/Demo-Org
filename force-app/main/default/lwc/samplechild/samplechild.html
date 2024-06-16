@@ -1,0 +1,10 @@
+<template>
+  <lightning-card title="Child Component">
+       <p class="parentText">{parentComponentCarName}</p> 
+
+       <div class="child to parent">
+         <lightning-input type="text" value={stuName} label="Enter student name" onchange={getstudentName}></lightning-input>
+         <lightning-button variant="brand" label="Enter" onclick={passNametoParent}></lightning-button>
+       </div>
+    </lightning-card>
+</template>

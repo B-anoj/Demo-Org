@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="lead data" icon-name="standard:account">
+        <template if:true={lead.data}>
+            <template for:each={lead.data} for:item="le">
+                <p key={le.Id}>
+                Name:{le.Name}
+                </p>
+            </template>
+        </template>
+        
+    </lightning-card>
+
+</template>

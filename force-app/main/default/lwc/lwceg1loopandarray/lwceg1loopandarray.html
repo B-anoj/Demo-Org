@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="loop and array with for each">
+        <template for:each={cities} for:item=a>
+            will give data in single line: {a}
+            will give the data in mutiple line: <p key={a}>{a}</p>
+        </template>
+    </lightning-card>
+    
+</template>

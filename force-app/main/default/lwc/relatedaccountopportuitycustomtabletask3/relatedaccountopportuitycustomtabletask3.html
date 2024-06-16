@@ -1,0 +1,49 @@
+<template>
+<lightning-card  variant="Narrow"  title="Account Under Related Opportunity" icon-name="standard:account">
+    <div class="slds-box slds-theme–default">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                       CheckBox
+                    </th>
+                    <th class="" scope="col">
+                       Serial number
+                    </th>
+                    <th class="" scope="col">
+                       Name
+                    </th>
+                    <th class="" scope="col">
+                        Phone
+                    </th>
+                    <th class="" scope="col">
+                        Description
+                    </th>
+                </tr>
+            </thead>   
+            <tbody>
+                <template for:each={accountlist} for:item="acc" for:index="index">
+                    <tr key={acc.Id}>
+                        <td>
+                            <lightning-input type="checkbox" value={acc.selected} data-index={index} onchange={handelcheckbox} checked={acc.selected}></lightning-input>
+                        </td>
+                         <td>
+                            <lightning-input type="text" value ={acc.sno} data-index={index} data-field="sno" disabled></lightning-input>
+                        </td>
+                        <td>
+                            <lightning-input type="text" value={acc.Name} data-index={index} data-field="Name"></lightning-input>
+                        </td>
+                        <td>
+                            <lightning-input type="Phone" value={acc.Phone} data-index={index} data-field="Phone"></lightning-input>
+                        </td>
+                         <td>
+                            <lightning-input type="Description" value={acc.Description} data-index={index} data-field="Description"></lightning-input>
+                        </td>
+                    </tr>
+                </template>
+          
+           </tbody>           
+        </table>
+    </div>  
+</lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<template>
+<lightning-card title="Spinner in LWC">
+    <lightning-button variant="Toggle" label="brand" onclick={handleClick}></lightning-button>
+    <div class="slds-m-around_large">
+        <p if:true={isloaded}>Content has been loaded</p>
+        <div if:false={isloaded} class="slds-is-relative">
+            <lightning-spinner
+             alternative-text="Loading" variant="brand">
+            </lightning-spinner>
+        </div>
+    </div>
+    </lightning-card>
+
+</template>

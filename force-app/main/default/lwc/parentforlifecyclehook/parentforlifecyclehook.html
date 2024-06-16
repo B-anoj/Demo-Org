@@ -1,0 +1,22 @@
+<template>
+	<lightning-card title="life cycle ">
+		<lightning-button variant="Brand" label="Go to first template" onclick={changetemplate2}></lightning-button>
+
+		<div class="slds-m-around_medium">
+			<c-childforlifecyclehook message = {messageFromParent}></c-childforlifecyclehook>
+		</div>
+	</lightning-card>
+
+	<br/><br/>
+	<template if:true={error}>
+		<lightning-card title="Error Callback" icon-name="standard:account">
+			<div>Error Occoured </div>
+		</lightning-card>
+	</template>
+	<template if:false={error}>
+		<lightning-card title="Error Callback" icon-name="standard:account">
+			<div>Error Not Occoured </div>
+		</lightning-card>
+	</template>
+
+</template>

@@ -1,0 +1,44 @@
+<template>
+    <lightning-quick-action-panel title="Quick Action Title">
+    <center><h1 style="font-size: 2em;">Contact Details</h1><hr></center> 
+     <!-- <div if:true={isLoading}>
+        <lightning-spinner
+            alternative-text="Loading..." variant="brand" class="slds-is-fixed">
+            <lightning-button  onclick={updateRecordView}></lightning-button>
+        </lightning-spinner>
+    </div> -->
+     <!-- <template if:true={isSpinner}>
+        <div class="spinner">
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </div>
+    </template> -->
+
+           <!-- <lightning-input type="search"
+                             onchange={handlechanged}
+                             label="Search"
+                             value={searchKey}>
+            </lightning-input> -->
+
+
+ <div class="slds-p-around_large">
+             <lightning-datatable data={data}
+                        columns={columns}
+                        key-field="id"
+                        onrowselection={getSelectedRecords}></lightning-datatable>
+        </div>
+        <div slot="footer">   
+    <lightning-button label='Delete' variant="brand" onclick={deletecontacts}></lightning-button> 
+    &nbsp; &nbsp;
+    <lightning-button variant="brand" label="Cancel" onclick={closeAction} ></lightning-button>
+        </div>
+         <!-- <div class="slds-m-around_medium">
+            <p class="slds-m-vertical_medium content">
+                     Displaying {startingRecord} to {endingRecord} of {totalRecountCount} records.
+                     Page {page} of {totalPage}. </p>
+            <c-paginator onprevious={previousHandler} onnext={nextHandler}></c-paginator>
+        </div> -->
+</lightning-quick-action-panel>
+</template>
+
+
+</template>

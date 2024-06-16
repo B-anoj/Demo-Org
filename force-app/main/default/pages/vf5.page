@@ -1,0 +1,38 @@
+<apex:page setup="false" sidebar="false" showheader="false" tabStyle="Patient2__c">
+    <apex:sectionHeader title="Position Edit" subtitle="New Position Record"/>
+   
+    <apex:form >
+    
+        <!-- Button Controls.... -->
+        <apex:commandButton value="Save"/>
+        <apex:commandButton value="Save & New"/>
+        <apex:commandButton value="Cancel"/>
+        <apex:commandButton value="Delete"/>
+        <apex:commandButton value="Search"/> &nbsp;&nbsp;
+        
+        
+        <apex:commandButton value="Save" action="{!Save}"/>
+        <apex:commandButton value="Save & New" action="{!Save}"/>
+        
+        <!-- CommandLink Controls.... -->
+        <b>
+            <apex:commandLink value="First"/> &nbsp;&nbsp;
+            <apex:commandLink value="Previous"/> &nbsp;&nbsp;
+            <apex:commandLink value="Next"/>&nbsp;&nbsp;
+            <apex:commandLink value="Last"/>
+        </b>
+        
+        <apex:pageBlock title="Account Details" id="accBlock">
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="Contacts" id="conBlock">
+        </apex:pageBlock>
+        
+        <apex:pageblock title="Opportunities" id="opptyBlock">
+        </apex:pageblock>
+        
+        <apex:pageblock title="Cases" id="csBlock">
+        </apex:pageblock>
+        
+    </apex:form>
+</apex:page>

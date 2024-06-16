@@ -1,0 +1,25 @@
+<template>
+    <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+        <div class="slds-box slds-p-top_small" style="background-color: white;">
+            <lightning-record-edit-form object-api-name="Contact" id="createContactForm">
+                <lightning-input-field field-name="AccountId" variant="label-hidden" onchange={handleAccountSelection} required></lightning-input-field>
+            </lightning-record-edit-form>
+        </div>
+        <template if:true={selectedAccount}>
+            <div class="slds-box slds-p-top_small" style="background-color: white;">
+                <lightning-datatable
+                    key-field="Id"
+                    data={accountData}
+                    columns={accountColumns}
+                ></lightning-datatable>
+            </div>
+            <div class="slds-box slds-p-top_small" style="background-color: white;">
+                <lightning-datatable
+                    key-field="Id"
+                    data={contactData}
+                    columns={contactColumns}
+                ></lightning-datatable>
+            </div>
+        </template>
+    </lightning-card>
+</template>

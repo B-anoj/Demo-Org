@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account Record Search By Name" icon-name="standard:account">
+            <lightning-input type="search"  name="input" onchange={handleChange}></lightning-input>
+            
+    
+                        <template for:each={accountlist} for:item="acc">  
+                            <p key={acc.id}>  
+                                {acc.Name}
+                            </p>
+                        </template>    
+
+    </lightning-card>
+
+</template>

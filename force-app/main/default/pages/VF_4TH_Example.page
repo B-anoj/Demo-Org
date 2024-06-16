@@ -1,0 +1,112 @@
+<!--Hii this is A comment format:- Single line comment-->
+<!--Multiple
+---->
+<apex:page standardController="Account" sidebar="false" showHeader="false">
+    <apex:stylesheet value="{!$Resource.st2}"/>
+    <div class="Ban">
+        <b>LoggedIn User Name</b> {!$User.FirstName} {!$User.LastName} <br/>
+        <b>Logged In User Email:</b> {!$User.Email}     
+    </div>
+   
+   
+    
+    <apex:tabPanel >
+        <apex:tab label="Tab1-Account Input" styleClass=".mytab">
+            <apex:form >
+                <div class="Banoj">
+                <apex:pageBlock title="Account Creation" >
+                    <apex:pageBlockSection columns="1">
+                        <apex:inputField value="{!Account.Name}" style="background-color: green; font-style: italic; font-size: 20px;"/>  <!-- inline css are using "style"-->
+                        <apex:inputField value="{!Account.Fax}" styleClass="myinp"/>      <!--Internal css are using styleclass ,I am defiend extenal css in outside name is called "miinp" then calling to here-->
+                        <apex:inputField value="{!Account.Description}" styleClass="myinp"/>
+                        <apex:inputField value="{!Account.Industry}" styleClass="myinp"/>
+                        <apex:inputField value="{!Account.phone}" styleClass="myinp"/>
+                        <apex:inputField value="{!Account.Rating}" styleClass="myinp"/>
+                         <apex:inputField value="{!Account.OwnerId}" styleClass="myinp"/>
+                        
+                        <apex:inputText label="Enter length" value="{!Account.phone}" styleClass="myinp"/>
+                        <apex:inputText label="enter bredth" styleClass="myinp"/>
+                        
+                        <apex:inputTextarea label="School Diary" cols="15" rows="3" styleClass="myinp"/>
+                        <apex:inputSecret label="Enter password"/>
+                        <apex:inputHidden />
+                        
+                        <apex:selectRadio label="select your Course" layout="pageDirection">  <!--Hii this is A comment format-->
+                            <apex:selectOption itemLabel="salesforce" itemValue="sfdc"></apex:selectOption>
+                            <apex:selectOption itemLabel="SAP Crm" itemValue="SAP"></apex:selectOption>
+                            <apex:selectOption itemLabel="MS.Net" itemValue=".net"></apex:selectOption>
+                            <apex:selectOption itemLabel="JAVA" itemValue="J"></apex:selectOption>
+                        </apex:selectRadio>
+                        
+                        <apex:selectCheckboxes label="select your Course" layout="pageDirection">
+                            <apex:selectOption itemLabel="salesforce" itemValue="sfdc"></apex:selectOption>
+                            <apex:selectOption itemLabel="SAP Crm" itemValue="SAP"></apex:selectOption>
+                            <apex:selectOption itemLabel="MS.Net" itemValue=".net"></apex:selectOption>
+                            <apex:selectOption itemLabel="JAVA" itemValue="J"></apex:selectOption>
+                        </apex:selectCheckboxes>
+                        
+                        <apex:commandButton value="click here to save" title="Hii click on that button" action="{!save}"/>
+                        <apex:commandLink value="click here to save" title="Hii click on that button" action="{!save}"/>
+                        <apex:commandButton value="click here to delete" action="{!delete}"/>
+  
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+              </div>
+            </apex:form>
+        </apex:tab>
+         <apex:tab label="Tab2 -To be Decided later" styleClass=".mytab">
+             <apex:iframe src="https://www.spicejet.com/"></apex:iframe>
+        </apex:tab>
+         <apex:tab label="Tab3-Account Output">
+             <apex:pageBlock title="Account Details">
+        <apex:pageBlockSection title="Basic Details" columns="1">
+            <apex:outputField value="{!Account.name}"/>
+            <apex:outputField value="{!Account.phone}"/>
+            <apex:outputField value="{!	Account.Description}"/>
+            <apex:outputField value="{!Account.Rating}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:pageBlockSection title="Related contact details" columns="1">
+                <apex:relatedList list="contacts"/>
+                <apex:relatedList list="cases"/>
+                <apex:relatedList list="Opportunities"/>
+            </apex:pageBlockSection>    
+      </apex:pageBlockSection> 
+        <apex:pageBlockSection title="Custom Table -Contact Details">
+            <apex:pageBlockTable value="{!Account.Contacts}" var="AC">
+                <apex:column value="{!AC.Firstname}"/>
+                <apex:column value="{!AC.lastname}"/>
+                <apex:column value="{!AC.phone}"/>
+                <apex:column value="{!AC.Email}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlock title="UN Related Table Details">
+            <apex:pageBlockSection title="Patient Table">
+                <apex:listviews type="patient__c"/>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        <apex:pageBlockSection title="Advance Details">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Contacts Details">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Related Details">
+        <apex:pageBlockSection title="Decided Later">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Decided later">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Decided Later">
+        <apex:pageBlockSection title="Decided Later">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Decided later">
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+        </apex:tab>    
+    </apex:tabPanel>
+</apex:page>

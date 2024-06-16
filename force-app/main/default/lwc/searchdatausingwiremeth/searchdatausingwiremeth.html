@@ -1,0 +1,9 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Search account data using wire">
+        <template for:each={accounts} for:item="acc">
+            <p key={acc.id}>
+                Name:{acc.name}
+            </p>
+        </template>
+    </lightning-card>   
+</template>

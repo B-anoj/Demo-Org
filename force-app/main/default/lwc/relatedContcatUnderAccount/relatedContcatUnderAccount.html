@@ -1,0 +1,19 @@
+<template>
+    <lightning-card variant="Narrow" title="Related Contacts">
+        <lightning-datatable
+            key-field="Id"
+            data={accounts}
+            columns={accountColumns}
+            onrowselection={handleRowSelection}>
+        </lightning-datatable>
+        <template if:true={selectedAccountId}>
+            <lightning-card title="Related Contacts" icon-name="standard:account">
+                <lightning-datatable
+                    key-field="Id"
+                    data={relatedContacts}
+                    columns={contactColumns}>
+                </lightning-datatable>
+            </lightning-card>
+        </template>
+    </lightning-card>
+</template>

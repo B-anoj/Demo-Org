@@ -1,0 +1,61 @@
+<template>
+    <lightning-card title="Account Record Insert and Delete" icon-name="standard:account">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" 
+        aria-label="Example table of Opportunities with vertical borders">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Name">Name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Phone">Phone</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Rating">Rating</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Industry">Industry</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Add">
+                            <lightning-button-icon variant="brand" size="xx-small" icon-name="utility:add" alternative-text="Add" 
+                                onclick={handleAddRow}></lightning-button-icon>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={accountList} for:item="account">
+    <tr key={account.Id}>
+        <td data-label="Name">
+            <div class="slds-truncate">
+                <lightning-input type="text" value={account.Name} onchange={handleAccountChange} data-id={account.Id} data-field="Name"></lightning-input>
+            </div>
+        </td>
+        <td data-label="Phone">
+            <div class="slds-truncate">
+                <lightning-input type="tel" value={account.Phone} onchange={handleAccountChange} data-id={account.Id} data-field="Phone"></lightning-input>
+            </div>
+        </td>
+        <td data-label="Rating">
+            <div class="slds-truncate">
+                <lightning-input type="text" value={account.Rating} onchange={handleAccountChange} data-id={account.Id} data-field="Rating"></lightning-input>
+            </div>
+        </td>
+         <td data-label="Industry">
+            <div class="slds-truncate">
+                <lightning-input type="text" value={account.Industry} onchange={handleAccountChange} data-id={account.Id} data-field="Industry"></lightning-input>
+            </div>
+        </td>
+        <td data-label="Delete">
+            <div class="slds-truncate">
+                <lightning-button-icon variant="base" size="xx-small" icon-name="utility:delete" alternative-text="Delete" onclick={handleDeleteRow} data-row={account.Id}></lightning-button-icon>
+            </div>
+        </td>
+    </tr>
+</template>
+
+            </tbody>
+        </table>
+    </lightning-card>
+</template>

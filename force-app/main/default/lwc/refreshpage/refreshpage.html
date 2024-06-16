@@ -1,0 +1,19 @@
+<template>
+      <!-- loader -->
+    <div if:true={isLoading}>
+        <lightning-spinner
+            alternative-text="Loading..." variant="brand" class="slds-is-fixed">
+        </lightning-spinner>
+    </div>
+    <!-- /loader -->
+ 
+ 
+    <!-- Delete contact and refresh page -->
+    <lightning-card title="Refresh Standard Component" icon-name="custom:custom17">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Delete Contact" onclick={handleClick} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+    <!-- /Delete contact and refresh page -->
+
+</template>

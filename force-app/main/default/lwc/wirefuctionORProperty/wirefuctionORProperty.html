@@ -1,0 +1,26 @@
+<template>
+  
+     <lightning-card title="search contact-wire" icon-name="standard:account">
+      <lightning-input variant="brand" label="Search contct:-Wire a Property or Function" type="search" value={searchkey} onchange={handelchange} ></lightning-input>
+       ***wire a property***
+      <template if:true={contact.data}>
+          <template for:each={contact.data} for:item="con">
+              <p key={con.Id}>
+                  Name :{con.Name}
+                  Phone :{con.Phone}
+                  Email :{con.Email}
+              </p>
+          </template>
+      </template>
+          <template if:true={contact.error}>
+          we can not display the your record due to {contact.error}.please try later
+      </template> 
+      
+       *********** wire a function*********
+    </lightning-card> 
+    <template for:each={banojData} for:item="bs">
+        <p key={bs.Id}>
+            Name:{bs.Name}
+            </p>
+    </template>
+</template>

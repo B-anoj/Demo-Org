@@ -1,0 +1,29 @@
+<template>
+<lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">   
+<lightning-button variant="brand" label="Start" title="loaddata" onclick={loadAccdata}></lightning-button>
+<lightning-layout multiple-rows>
+    <lightning-layout-item size="3" padding="around-small">
+        <template if:true={AccData}>
+            <template for:each={AccData} for:item="rec">
+                <lightning-button key={rec.id} label={rec.Name} onclick={getConrecords} value={rec.Id}></lightning-button>
+                <p key={rec.id}></p>
+            </template>
+        </template>
+    </lightning-layout-item>
+    <lightning-layout-item size="9" padding="around-small">
+        <template if:true={conData}>
+         <lightning-datatable if:true={conData}
+            key-field="id"
+            data={conData}
+            columns={conCols} >
+            
+        </lightning-datatable>
+    <lightning-button variant="brand" label="Delete" title="delete" onclick={handleDeleteCon}></lightning-button>
+    <lightning-button variant="brand" label="Cancel"  onclick={handlecancel}></lightning-button>
+        </template>
+    </lightning-layout-item>
+    <lightning-button variant="base" label="labelName" title="titleName" onclick={handleClick}></lightning-button>
+        
+</lightning-layout>
+</lightning-card>
+</template>

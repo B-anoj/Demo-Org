@@ -1,0 +1,73 @@
+<!-- Show the list of Lead records into Table
+It should have the below columns : 
+S.No.
+Name
+Company Name
+Stage - Use 4 values - New, Active, Junk, Converted
+
+If the stage is New, show in Orange Color
+If the stage is Active, show in Green Color
+If the stage is Junk, show in Red Color -->
+
+<!--<template>
+<lightning-card  variant="Narrow"  title="List Of Lead Record" icon-name="standard:Lead">
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="slds-cell-wrap" scope="col">
+                    S.No.
+                </th>
+                <th class="slds-cell-wrap" scope="col">
+                    Name
+                </th>
+                <th class="slds-cell-wrap" scope="col">
+                    Company Name
+                </th>
+                <th class="slds-cell-wrap" scope="col">
+                    	Status
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={leadRecords} for:item="lead" for:index="index">
+                
+                <tr key={lead.Id}> 
+                    <td>{lead.Name}</td>
+                    <td>{lead.Company}</td>
+                    
+                    <td >{lead.Status}</td>
+                </tr>
+            </template>
+        </tbody>    
+    </table>
+    </lightning-card>
+</template> -->
+
+
+<template>
+    <lightning-card title ="Lead Records" icon-name="Standard:lead">
+
+       <div class="slds-p-around_medium">
+
+        <table class = "slds-table slds-table_cell-buffer slds-table_bordered">
+            <thead>
+                <tr>
+                    <th>LeadName</th>
+                    <th>Company</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={showleadrecords} for:item = "led">
+                    <tr key={led.Id}>
+                        <td>{led.Name}</td>
+                        <td>{led.Company}</td>
+                        <td style={led.color}>{led.Status}</td>
+                    </tr>
+                </template>
+
+            </tbody>
+        </table>
+     </div>
+    </lightning-card>
+</template>

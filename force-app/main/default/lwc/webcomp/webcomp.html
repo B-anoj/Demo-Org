@@ -1,0 +1,17 @@
+<template>
+     <lightning-card title="Breached Websites">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Search" onchange={handleSearch} class="slds-m-bottom_small"></lightning-input>
+             <lightning-combobox label="Sort By" options={sortOptions} onchange={handleSort} class="slds-m-bottom_small"></lightning-combobox>
+            <lightning-datatable
+                data={filteredWebsites}
+                columns={columns}
+                key-field="Id"
+                sorted-by={sortedBy}
+                sorted-direction={sortedDirection}
+                onsort={handleSort}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+</template>

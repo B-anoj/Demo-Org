@@ -1,0 +1,22 @@
+<apex:page standardcontroller="account" sidebar="false" showHeader="true">
+    <apex:sectionHeader title="Account details"/>
+    <apex:form >
+        <apex:pageBlock title="Account edit">
+            <apex:commandButton value="save"></apex:commandButton>
+            <apex:commandButton value="cancel"/>
+            <apex:pageBlockSection title="input data" columns="2" collapsible="true">
+                <apex:inputField value="{!account.name}"/>
+                <apex:inputField value="{!account.rating}"/>
+                 <apex:inputField value="{!account.phone}"/>
+                 <apex:inputField value="{!account.fax}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="input second value" columns="1">
+            <apex:inputField value="{!account.website}"/>
+                <apex:inputField value="{!account.site}"/>
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+    </apex:form>
+    
+</apex:page>

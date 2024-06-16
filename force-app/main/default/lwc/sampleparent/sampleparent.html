@@ -1,0 +1,14 @@
+<template>
+   <lightning-card title="Parent Component">
+       
+        <div class="parentDiv">
+            <lightning-input type="text" label="Enter Car Name" onchange={handleCarNameChange}></lightning-input>
+            <p>{studentNamefromchild}</p>
+        </div>
+
+         <div class="childDiv">
+            <c-samplechild onmessagefromchild={handelMessagefromchild}></c-samplechild>
+       </div>
+      
+    </lightning-card>
+</template>

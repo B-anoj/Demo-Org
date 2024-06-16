@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <div class="scrollable-container">
+            <template for:each={accounts} for:item="acc">
+                <div key= {acc.Id} class="account-header">
+                    Name:{acc.Name},
+                    Phone:{acc.Phone}
+                </div>
+                <div key={acc.Id} class="scrollable-cards">
+                 <c-query-accountrelated-contactchild contacts={acc.Contacts}></c-query-accountrelated-contactchild>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

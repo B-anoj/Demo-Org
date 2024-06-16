@@ -1,0 +1,22 @@
+<template>
+    <lightning-card   title="Account details" icon-name="standard:account">
+        <lightning-datatable
+            key-field="id"
+            data={dataList}
+            columns={columns}
+            onrowaction={handleRowAction}>
+        </lightning-datatable> 
+
+        <div>
+            <c-confirmationdialog title="Delete Account Record "
+            message="Are you sure to delete contact record?" 
+            confirm-label="Delete"
+            cancel-label="Cancel"
+            visible={isDailogVisible}
+            name="ConfirmModel"
+            original-message={originalMessage}
+            onclick={handelDialogClick}>
+            </c-confirmationdialog> 
+        </div>
+    </lightning-card>
+</template>

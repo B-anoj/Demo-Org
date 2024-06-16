@@ -1,0 +1,19 @@
+<apex:page sidebar="false" showHeader="false">
+    <apex:form >
+        <apex:pageBlock title="SumofEvenOddNo.">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText label="Enter the number"/>
+                
+                <apex:selectRadio label="select your choice">
+                    <apex:selectOption itemLabel="Even number" itemValue="E"></apex:selectOption>
+                    <apex:selectOption itemLabel="Odd number" itemvalue="O"></apex:selectOption>
+                </apex:selectRadio>
+                
+                <apex:commandButton value="Calculate"/>
+                <apex:outputText label="The result is:"></apex:outputText>
+                
+                
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="AccountRangeData">
+        <lightning-input type="Date" variant="standard" name="name" label="StartDate" onchange={startdatechng} ></lightning-input>
+        <lightning-input type="Date" variant="standard" name="name" label="EndDate" ochange={enddatechange}></lightning-input>
+        <lightning-button variant="brand" label="saerch" onclick={handleClick}></lightning-button>
+        <template if:true={Account.data}>
+            <template for:each={Account.data} for:item="acc">
+                <p key={acc.Id}>
+                    acc.Name;
+                    acc.Phone;
+                </p>
+            </template>
+        </template>
+   
+    </lightning-card>
+       
+</template>

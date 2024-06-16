@@ -1,0 +1,28 @@
+<apex:page sidebar="false" showHeader="false">
+    <apex:form >
+        <p>
+            <center>HDFC Bank</center>
+        </p>
+       <center> <apex:image value="{!$Resource.HDFC1}" width="80" 
+     height="30"/></center>
+        <p>
+            <apex:outputLink value="https://www.spicejet.com"><b>Welcome to spicejet</b></apex:outputLink>
+        </p>
+        
+       
+        <apex:iframe src="https://www.spicejet.com/" height="700" scrolling="true"/>  
+        
+        <apex:pageBlock title="Simple Interest Calculator">
+            <apex:pageBlockSection columns="1">
+                <apex:inputText label="Enter The Principle"/>
+                <apex:inputText label="Enter the Term of Investment"/>
+                <apex:inputText label="Enter Rate Of Interest"/>
+           
+            <apex:commandButton value="Calculate"/>
+                <apex:outputText value="The Interest Accumlated is:"></apex:outputText>
+                <apex:outputText value="The total Maturity amount is:"></apex:outputText>
+    
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

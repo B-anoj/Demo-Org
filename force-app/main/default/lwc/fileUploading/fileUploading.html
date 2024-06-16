@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="File Upload" icon-name="utility:upload">
+        <!-- <lightning-record-edit-form
+            object-api-name="Custom_Object__c"
+            record-id={recordId}
+            onsuccess={handleSuccess}
+            onsubmit={handleSubmit}
+            onerror={handleError}>
+
+            <lightning-messages></lightning-messages> -->
+
+            <lightning-file-upload
+                label="Upload Files"
+                name="fileUploader"
+                accept={acceptedFormats}
+                record-id={recordId}
+                onuploadfinished={handleUploadFinished}
+                multiple>
+            </lightning-file-upload>
+
+            <!-- <div class="slds-m-top_medium">
+                <lightning-button type="submit" label="Save"></lightning-button>
+            </div> -->
+        <!-- </lightning-record-edit-form> -->
+    </lightning-card>
+</template>

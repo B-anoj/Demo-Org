@@ -1,0 +1,16 @@
+<!-- wire17_12.html -->
+<template>
+    <lightning-card variant="Narrow" title="Wire demo" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <template if:true={account.data}>
+                <template for:each={account.data} for:item="acc">
+                    <p key={acc.Id}>
+                        Name: {acc.Name}<br />
+                        Phone: {acc.Phone}
+                    </p>
+                </template>
+                 </template>
+                
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Lead Record" icon-name="standard:account">
+        <lightning-input label="First Name"  onchange={handleFirstNameChange} required="true"></lightning-input>
+        <lightning-input label="Last Name"  onchange={handleLastNameChange}  ></lightning-input>
+        <lightning-input label="Company"  onchange={handleCompanyChange} ></lightning-input>
+        <lightning-input label="Email"  onchange={handleEmailChange}  required="true"></lightning-input>
+        <lightning-input label="Phone"  onchange={handlePhoneChange}  required="true"></lightning-input>
+        <div class="slds-m-top_medium">
+                <lightning-button label="Create Lead" onclick={createLead} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,78 @@
+<template>
+    <div>
+    <lightning-card title=" Get Accounts" class="custom-card">
+        <div if:true={allaccs} class="slds-p-around_medium custom-card-content">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr>
+                        <th scope="col">CheckBox</th>
+                        <th scope="col">Serial Number</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={newaccountList} for:item="account" for:index="index">
+                        <tr key={account.Id}>
+                            <td>
+                                <lightning-input type="checkbox" value={account.selected} data-index={index} onchange={handleCheckboxChange} checked={account.selected}></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-input type="text" value={account.sno}  data-index={index} data-field="sno" disabled></lightning-input>
+                            </td>
+
+                            <td>
+                                <lightning-input type="text" value={account.Name} data-index={index} data-field="Name"></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-input type="Phone" value={account.Phone}  data-index={index} data-field="Phone"></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-input type="text" value={account.Description}  data-index={index} data-field="Description"></lightning-input>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+            <div class="slds-m-top_medium">
+                <button class="slds-button slds-button_brand" onclick={handleNext} >Next</button>
+            </div>
+             
+        </div>
+
+        <div if:true={ListofOpportunity} class="slds-p-around_medium custom-card-content">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr>
+                        <th scope="col">OpportyunityId</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">StageName</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={ListofOpps} for:item="opp" for:index="index">
+                        <tr key={opp.Id}>
+                            <td>
+                                <lightning-input type="text" value={opp.Id}  data-index={index} data-field="Id" disabled></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-input type="text" value={opp.Name} data-index={index} data-field="Name"></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-input type="Text" value={opp.StageName}  data-index={index} data-field="StageName"></lightning-input>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+            <div class="slds-m-top_medium">
+                <button class="slds-button slds-button_brand" onclick={handleBack} >Prevoius</button>
+            </div>
+
+
+        </div>
+    </lightning-card>
+    </div>
+</template>

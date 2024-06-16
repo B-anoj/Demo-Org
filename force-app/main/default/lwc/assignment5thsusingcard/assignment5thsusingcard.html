@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Accounts as Cards" icon-name="standard:account">
+        <div class="slds-grid slds-wrap">
+            <template for:each={accounts} for:item="account">
+                <div key={account.Id} class="slds-size_1-of-2 slds-p-around_small">
+                    <lightning-card title={account.Name} key={account.Id}>
+                        <p>Industry: {account.Industry}</p>
+                        <p>Type: {account.Type}</p>
+                    </lightning-card>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

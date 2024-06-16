@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  title="Account data get">
+        
+        <template for:each={acclist} for:item="acc">
+        <p key={acc.Id}>
+            Name:{acc.Name}
+        </p>
+        </template>
+        
+    </lightning-card>
+
+</template>

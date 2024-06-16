@@ -1,0 +1,11 @@
+<template>
+
+    <lightning-button variant="success" label="GetAccount" title="GetAccount" onclick={handleClick}></lightning-button>
+      <template for:each={accountls} for:item="acc">
+
+          <p key={acc.Id}>Name:{acc.Name}<br></p>
+
+
+
+      </template>
+</template>

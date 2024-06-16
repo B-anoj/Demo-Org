@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-form-element" data-source="lookupcontainer">
+        <div class="slds-combobox_container-slds-has-selected">
+            <label class="slds-form-element__label" for="combobox-id-1">{label}</label>
+            <div class="lookupInputContainer slds-combobox slds-dropdown-trigger_click" aria-expand="false" aria-haspop="listbox" role="combobox">
+                <div class="slds-combobox__from-element slds-input-has-icon slds-input-has-icon_left-right">
+                    <div class="searchBoxWrapper slds-show">
+                        <!--lookup input field-->
+                        <Lightning-input type="search" data-source="searchInputField" onclick={toggleResult} onchange={handleKeyChange} 
+                        is-loading={issearchLoading} value={searchKey} variant="label-hidden" placedholder={placeHolder}>
+                        </Lightning-input>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+
+</template>
