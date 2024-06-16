@@ -1,11 +1,12 @@
 public class ChatGptController {
-   /* private static String Endpoint= 'https://api.openai.com/v1/chat/completions';
+    private static String Endpoint= 'https://api.openai.com/v1/chat/completions';
     public static void getChatGptResult(String searchTerm){
         String searchQueryEscape = (searchTerm).trim();
+        String BarrierToken = 'Bearer '+System.Label.ChapgptapiKey;
         HttpRequest request=new HttpRequest();
         request.setEndpoint(Endpoint);
         //+System.Label.Chat_Gpt_API_Key
-        request.setHeader('Authorization','Bearer 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');
+        request.setHeader('Authorization',BarrierToken);
         request.setHeader('Content-Type','application/json');
         request.setTimeout(120000);
         String reqBody = '{"model" : "text-davinci-003","prompt":"'+searchQueryEscape+'","max_tokens":4000,"temperature":0,"stream":false,"top_p":0.5}';
@@ -22,6 +23,6 @@ public class ChatGptController {
         
         
 
-    }*/
+    }
 
 }
